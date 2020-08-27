@@ -7,3 +7,9 @@ node_js:
 branches:
   only:
     - master
+
+deploy:
+  provider: heroku
+  app: "dima-ci"
+  api_key:
+    secure: "4ec8648d-eced-46ab-ad26-5eba4556233c"
