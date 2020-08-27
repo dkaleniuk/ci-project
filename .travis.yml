@@ -11,5 +11,5 @@ branches:
 deploy:
   provider: heroku
   api_key:
-    secure: 4ec8648d-eced-46ab-ad26-5eba4556233c
+    secure: 54a560b7-583e-4a95-9ea7-d44af4cd3eb7
   app: dima-ci
