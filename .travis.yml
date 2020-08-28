@@ -10,3 +10,6 @@ deploy:
   api_key:
     secure: FWD0tMIDn+99hIpvgXHDesSJ1Y1gmMCHenYNV/CZHv3tIQyvwYF657pH2rOSsHPqh0YMiZDSIHC1XI7L8YSBkty+jnSiqB2vhVyj2WziJynyx3VizYJa4/kvQAyMuB9JlvJnr1cYMthDCvpAI1X+PzEJFnX8BSOAkCC1XU2UF2MvB+FEWE6Ps80VVj2dRCBcgWJbarf83mnuRLXMtkEg/cebcOxcJBybOqm3frg6Pv4liFR4y0oEPwysTrQVyGK14AeNIN806Ic5G5pLi3RCI3W8PbI5wTV8QFpSMrz8mR7nPw+28hF6jOn+QQoLTy3WkB2S4afNde/oiYvHQj5ONO8SHW5RF1X6qt/NLmtm/taFroo3JXwYuqNZrU62Ff0jlXMiMR5NNmw0ae3hq/l3P6T2iKljBUoAlF3PKJxAu2NnB+Yry+2r7H7lrUvms+OAqxDwhL7zYf5CYgVh+ocwN2gkOIY/UZXFVpRdy8bHjtFlS/iw2nnG8VbtCxVRniKR4Qlra7//x9oW99pyyRGZsM/3tTrX3CtK32Ukx/H5Cq4uOz10yoy9+9MP5ZFg5d+DXXNOMsscFNl+kAofNLN2UF5Z18OZwY89+buEbIuhb5QDtya8uA5TWWf34W1XTlnYwREA9mgu0cX0JGDAztHnZr3RG3wlT3OW9wsAxZXD52E=
   app: dima-ci
+after_success:
+  - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
