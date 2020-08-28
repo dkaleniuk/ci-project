@@ -25,15 +25,17 @@ Connected Travis CI to run tests and if passed -> deploy.
 For automated project deployement I used Heroku cloud application platform.
 
 # To setup TravisCi I added.travis.yml file with such config:
-sudo: false
-language: node_js
-node_js:
-- 10
-branches:
-only:
-- master
-deploy:
-provider: heroku
-api_key:
-  secure: [HERE YOUR API KEY FROM HEROKU ACCOUNT]
-app: [APP NAME]
+<pre>
+  sudo: false
+  language: node_js
+    node_js:
+      - 10
+  branches:
+    only:
+      - master
+  deploy:
+    provider: heroku
+    api_key:
+      secure: [HERE YOUR API KEY FROM HEROKU ACCOUNT]
+    app: [APP NAME]
+</pre>
