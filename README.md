@@ -1,3 +1,14 @@
+# dima-ci
+[![Travis][build-badge]][build]
+[![Coveralls][coveralls-badge]][coveralls]
+
+[build-badge]: https://img.shields.io/travis/dmitrykaleniuk/ci-project/master.png?style=flat-square
+[build]: https://travis-ci.org/dmitrykaleniuk/ci-project
+
+[coveralls-badge]: https://img.shields.io/coveralls/dmitrykaleniuk/ci-project/master.png?style=flat-square
+[coveralls]: https://coveralls.io/github/dmitrykaleniuk/ci-project
+
+
 # CI&CD with TravisCi and Heroku.
 
 This project was created with [Create React App](https://github.com/facebook/create-react-app) for CI testing purposes.
