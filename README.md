@@ -38,7 +38,7 @@ Framework: nodejs
     app: [APP NAME]
 </pre>
 
-# To create beautiful badges added this code to .travil.yml:
+# To create beautiful badges added this code to .travis.yml:
  <pre>
   after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
