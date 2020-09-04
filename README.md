@@ -22,7 +22,7 @@ For automated project deployement I used Heroku cloud application platform.
 Framework: nodejs
 
 
-# To setup TravisCi I added.travis.yml file with such config:
+# To setup TravisCi I added .travis.yml file with such config:
 <pre>
   sudo: false
   language: node_js
@@ -37,6 +37,25 @@ Framework: nodejs
       secure: [HERE YOUR API KEY FROM HEROKU ACCOUNT]
     app: [APP NAME]
 </pre>
+
+# To create beautiful badges added this code to .travil.yml:
+ <pre>
+  after_success:
+  - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
+ </pre>
+ 
+ And to display it added in README.md file:
+ <pre>
+  [![Travis][build-badge]][build]
+  [![Coveralls][coveralls-badge]][coveralls]
+
+  [build-badge]: https://img.shields.io/travis/dmitrykaleniuk/ci-project/master.png?style=flat-square
+  [build]: https://travis-ci.org/dmitrykaleniuk/ci-project
+
+  [coveralls-badge]: https://img.shields.io/coveralls/dmitrykaleniuk/ci-project/master.png?style=flat-square
+  [coveralls]: https://coveralls.io/github/dmitrykaleniuk/ci-project
+ </pre>
 
 ## API key configuration
 API key can be found in HEROKU->AccountSettings->API key
