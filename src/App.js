@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn agular if you can! :D
+          Learn react if you can! :D It works!
         </a>
       </header>
     </div>
